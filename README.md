@@ -1,4 +1,4 @@
-# Movie Data Pipeline (2010–2023)
+# Movie Data Pipeline (2010–2020)
 
 This project demonstrates a full ELT pipeline using Spark and Databricks.
 
