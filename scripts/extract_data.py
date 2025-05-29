@@ -1,7 +1,9 @@
 import pandas as pd
 import requests
+from dotenv import load_dotenv
 import os
 
+load_dotenv()
 API_KEY = os.getenv("TMDB_API_KEY")
 url = 'https://api.themoviedb.org/3/discover/movie'
 params = {
@@ -25,4 +27,4 @@ for page in range(1, 11):
     all_movies.extend(data['results'])
 
 df = pd.DataFrame(all_movies)
-df.to_csv('tmdb_movies_2010_2020.csv', index=False)
+df.to_csv('../data/tmdb_movies_2010_2020.csv', index=False)
